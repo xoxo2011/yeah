@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+var titles = [
+    "Multimedia that will make you say YEAH! ",
+    "Multimedia That Will make you say what?!?! ",
+    "Welcome to The Drowned Shipwreck of NOSTALGIA!!!! ",
+    "I was going to try an all almond diet, but that's just nuts.",
+	"I'm afraid for the calendar. Its days are numbered.",
+	"Dear Math, grow up and solve your own problems.",
+    "Why did the tomato blush? Because it saw the salad dressing!"
+];
+
+
+var randomTitle = titles[Math.floor(Math.random() * titles.length)];
+document.title = randomTitle;
+
+
+var repeat = 1;
+var title = document.title;
+var leng = title.length;
+var start = 1;
+
+function titlemove() {
+    var titl = title.substring(start, leng) + title.substring(0, start);
+    document.title = titl;
+    start++;
+    if (start == leng + 1) {
+        start = 0;
+        if (repeat == 0) return;
+    }
+    setTimeout("titlemove()", 140);
+}
+
+if (document.title) {
+    titlemove();
+}
+</script>
+</head>
+<body style="background-image: url('https://html-classic.itch.zone/html/17474030/img/aquamarine_water_blue.jpg'); background-repeat: repeat;">
+
+<div style="text-align: center;"> <img src="https://web.archive.org/web/20091021153028im_/http://www.geocities.com/gordfiredept/sticky_coming_soon.gif" style="height: 300px; width: auto;"> </div>
+
+</body>
+</html>
