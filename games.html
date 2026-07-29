@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var titles = [
+    "Multimedia that will make you say YEAH! ",
+    "Multimedia That Will make you say what?!?! ",
+    "Welcome to The Drowned Shipwreck of NOSTALGIA!!!! ",
+    "I was going to try an all almond diet, but that's just nuts.",
+    "I'm afraid for the calendar. Its days are numbered.",
+    "Dear Math, grow up and solve your own problems.",
+    "Why did the tomato blush? Because it saw the salad dressing!"
+];
+var title = titles[Math.floor(Math.random() * titles.length)], start = 1;
+document.title = title;
+function titlemove() {
+    document.title = title.substring(start) + title.substring(0, start);
+    if (++start > title.length) start = 0;
+    setTimeout(titlemove, 140);
+}
+if (document.title) titlemove();
+
+function filterGames(letter) {
+    var rows = document.getElementsByClassName('game-row');
+    for (var i = 0; i < rows.length; i++) {
+        var titleText = rows[i].getAttribute('data-title').toUpperCase();
+        if (letter === 'ALL' || titleText.startsWith(letter)) {
+            rows[i].style.display = '';
+        } else {
+            rows[i].style.display = 'none';
+        }
+    }
+}
+</script>
+<style>
+body { background: url('https://html-classic.itch.zone/html/17474030/img/kitsch_other_purple.jpg') repeat; margin: 0; padding: 0; color: #fff; font-family: sans-serif; }
+a img { border: none; vertical-align: middle; }
+.alphabet-bar { padding-left: 20px; padding-top: 10px; font-size: 14px; }
+.alphabet-bar a { color: #ff0; text-decoration: none; margin-right: 5px; font-weight: bold; }
+.alphabet-bar a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<div style="padding-left: 20px; padding-top: 15px;">
+<a href="https://xoxo2011.github.io/yeah/"><img src="https://ftpmirror.infania.net/sites/www.heathersanimations.net/webdesign1/back_007.gif" alt="back"></a>
+    <p style="margin: 5px 0;">YEAH! - Games | Currently serving <strong>3</strong> Games listed | <img src="https://web.archive.org/web/20091027070726/http://www.geocities.com/dark_lotus_chick/Uploaded_Stuff/halls/pcskul.gif" alt="Virusfree" height="80"> Malware-Free</p> 
+</div>
+
+<!-- Alphabet Letter Filter Bar -->
+<div class="alphabet-bar">
+    Filter: 
+    <a href="javascript:void(0);" onclick="filterGames('ALL')">[ALL]</a>
+    <script>
+        for (var i = 65; i <= 90; i++) {
+            var char = String.fromCharCode(i);
+            document.write('<a href="javascript:void(0);" onclick="filterGames(\x27' + char + '\x27)">' + char + '</a> ');
+        }
+    </script>
+</div>
+
+<table border="0" cellpadding="10" style="margin-left: 10px;">
+  <tr class="game-row" data-title="Angry Birds">
+    <td valign="middle">
+      <img src="https://img.itch.zone/aW1nLzE1Nzg3NzMwLnBuZw==/original/Y8kcG%2B.png" alt="Game Image" width="200" height="200" style="border: 0px solid white; display: block;">
+    </td>
+    <td valign="middle">
+      <h1 style="margin: 0 0 10px 0;">Angry Birds</h1>
+      <p style="margin: 4px 0;">Genre: Arcade / Puzzle</p>
+      <p style="margin: 4px 0;">Size: 74.2 MB &nbsp;&nbsp;&nbsp;&nbsp; Year:  Version 2013-2014</p>
+      <p style="margin: 4px 0;">OS: windows</p>
+      <p style="margin: 4px 0;">More info: <a href="https://archive.org/download/info_20260727/info.txt">Click for Info</a> </p>
+      <p style="margin: 8px 0 0 0;">
+        <a href="https://web.archive.org/web/20190522041331/http://download.angrybirds.com/games/AngryBirds/AngryBirdsInstaller_4.0.0.exe"><img src="https://web.archive.org/web/20090829074725im_/http://geocities.com/sunsetstrip/lounge/2302/download.gif" alt="download"></a>
+      </p>
+    </td>
+  </tr>
+</table>
+<table border="0" cellpadding="10" style="margin-left: 10px;">
+  <tr class="game-row" data-title="Airxonix">
+    <td valign="middle">
+      <img src="https://www.axysoft.com/airxonix/airxonix_.jpg" alt="Game Image" width="200" height="200" style="border: 0px solid white; display: block;">
+    </td>
+    <td valign="middle">
+      <h1 style="margin: 0 0 10px 0;">Airxonix</h1>
+      <p style="margin: 4px 0;">Genre: Action / Puzzle</p>
+      <p style="margin: 4px 0;">Size: 3.5 MB &nbsp;&nbsp;&nbsp;&nbsp; Year: 2000-2001</p>
+      <p style="margin: 4px 0;">OS: windows</p>
+      <p style="margin: 4px 0;">More info: <a href="https://dn721803.ca.archive.org/0/items/download_20250731_1126/AirXonix.txt">Click for Info</a> </p>
+      <p style="margin: 8px 0 0 0;">
+        <a href="https://archive.org/download/download_20250731_1126/AirXonix.exe"><img src="https://web.archive.org/web/20090829074725im_/http://geocities.com/sunsetstrip/lounge/2302/download.gif" alt="download"></a>
+      </p>
+    </td>
+  </tr>
+</table>
+<table border="0" cellpadding="10" style="margin-left: 10px;">
+  <tr class="game-row" data-title="bob">
+    <td valign="middle">
+      <img src="https://bobtherobber.io/upload/imgs/options/bob-the-robber-logo.jpg" alt="Game Image" width="200" height="200" style="border: 0px solid white; display: block;">
+    </td>
+    <td valign="middle">
+      <h1 style="margin: 0 0 10px 0;">Bob The Robber - .SWF</h1>
+      <p style="margin: 4px 0;">Genre: Strategy / Puzzle</p>
+      <p style="margin: 4px 0;">Size: 9.0 MB &nbsp;&nbsp;&nbsp;&nbsp; Year: 2011</p>
+      <p style="margin: 4px 0;">OS: windows</p>
+      <p style="margin: 4px 0;">More info: Requires Adobe Flash Player From <a href="https://xoxo2011.github.io/yeah/software.html">Here</a> </p>
+      <p style="margin: 8px 0 0 0;">
+        <a href="https://archive.org/download/bob-the-robber_202507/Bob%20The%20Robber.swf"><img src="https://web.archive.org/web/20090829074725im_/http://geocities.com/sunsetstrip/lounge/2302/download.gif" alt="download"></a>
+      </p>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

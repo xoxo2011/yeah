@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var titles = [
+    "Multimedia that will make you say YEAH! ",
+    "Multimedia That Will make you say what?!?! ",
+    "Welcome to The Drowned Shipwreck of NOSTALGIA!!!! ",
+    "I was going to try an all almond diet, but that's just nuts.",
+    "I'm afraid for the calendar. Its days are numbered.",
+    "Dear Math, grow up and solve your own problems.",
+    "Why did the tomato blush? Because it saw the salad dressing!"
+];
+var title = titles[Math.floor(Math.random() * titles.length)], start = 1;
+document.title = title;
+function titlemove() {
+    document.title = title.substring(start) + title.substring(0, start);
+    if (++start > title.length) start = 0;
+    setTimeout(titlemove, 140);
+}
+if (document.title) titlemove();
+
+function filterGames(letter) {
+    var rows = document.getElementsByClassName('game-row');
+    for (var i = 0; i < rows.length; i++) {
+        var titleText = rows[i].getAttribute('data-title').toUpperCase();
+        if (letter === 'ALL' || titleText.startsWith(letter)) {
+            rows[i].style.display = '';
+        } else {
+            rows[i].style.display = 'none';
+        }
+    }
+}
+</script>
+<style>
+body { background: url('https://html-classic.itch.zone/html/17474030/img/kitsch_other_purple.jpg') repeat; margin: 0; padding: 0; color: #fff; font-family: sans-serif; }
+a img { border: none; vertical-align: middle; }
+.alphabet-bar { padding-left: 20px; padding-top: 10px; font-size: 14px; }
+.alphabet-bar a { color: #ff0; text-decoration: none; margin-right: 5px; font-weight: bold; }
+.alphabet-bar a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<div style="padding-left: 20px; padding-top: 15px;">
+<a href="https://xoxo2011.github.io/yeah/"><img src="https://ftpmirror.infania.net/sites/www.heathersanimations.net/webdesign1/back_007.gif" alt="back"></a>
+    <p style="margin: 5px 0;">YEAH! - Software | Currently serving <strong>1</strong> program listed | <img src="https://web.archive.org/web/20091027070726/http://www.geocities.com/dark_lotus_chick/Uploaded_Stuff/halls/pcskul.gif" alt="Virusfree" height="80"> Malware-Free</p> 
+</div>
+
+<!-- Alphabet Letter Filter Bar -->
+<div class="alphabet-bar">
+    Filter: 
+    <a href="javascript:void(0);" onclick="filterGames('ALL')">[ALL]</a>
+    <script>
+        for (var i = 65; i <= 90; i++) {
+            var char = String.fromCharCode(i);
+            document.write('<a href="javascript:void(0);" onclick="filterGames(\x27' + char + '\x27)">' + char + '</a> ');
+        }
+    </script>
+</div>
+
+<table border="0" cellpadding="10" style="margin-left: 10px;">
+  <tr class="game-row" data-title="Adobe">
+    <td valign="middle">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Adobe_Flash_Player_32.svg/250px-Adobe_Flash_Player_32.svg.png" alt="Game Image" width="200" height="200" style="border: 0px solid white; display: block;">
+    </td>
+    <td valign="middle">
+      <h1 style="margin: 0 0 10px 0;">Adobe Flash Player</h1>
+      <p style="margin: 4px 0;">Size: 14.7 MB &nbsp;&nbsp;&nbsp;&nbsp; Year:  Version 2018-2019</p>
+      <p style="margin: 4px 0;">OS: windows</p>
+      <p style="margin: 4px 0;">More info: None</p>
+      <p style="margin: 8px 0 0 0;">
+        <a href="https://archive.org/download/flashplayer_32_sa/flashplayer_32_sa.exe"><img src="https://web.archive.org/web/20090829074725im_/http://geocities.com/sunsetstrip/lounge/2302/download.gif" alt="download"></a>
+      </p>
+    </td>
+  </tr>
+
+
+</body>
+</html>
