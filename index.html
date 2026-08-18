@@ -1,81 +1,122 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script>
-var titles = [
-    "Multimedia that will make you say YEAH! ",
-    "Multimedia That Will make you say what?!?! ",
-    "Welcome to The Drowned Shipwreck of NOSTALGIA!!!! ",
-    "I was going to try an all almond diet, but that's just nuts.",
-    "I'm afraid for the calendar. Its days are numbered.",
-    "Dear Math, grow up and solve your own problems.",
-    "Why did the tomato blush? Because it saw the salad dressing!"
-];
-
-var randomTitle = titles[Math.floor(Math.random() * titles.length)];
-document.title = randomTitle;
-
-var repeat = 1;
-var title = document.title;
-var leng = title.length;
-var start = 1;
-
-function titlemove() {
-    var titl = title.substring(start, leng) + title.substring(0, start);
-    document.title = titl;
-    start++;
-    if (start == leng + 1) {
-        start = 0;
-        if (repeat == 0) return;
-    }
-    setTimeout(titlemove, 140);
-}
-
-if (document.title) {
-    titlemove();
-}
-</script>
+<title> YEAH! </title>
+<style>
+  /* Hover effect for main navigation boxes */
+  .nav-box img {
+    transition: transform 0.2s ease, filter 0.2s ease;
+  }
+  .nav-box:hover img {
+    transform: scale(1.03);
+    filter: brightness(1.15);
+  }
+</style>
 </head>
-<body style="background-image: url('https://html-classic.itch.zone/html/17474030/img/kitsch_other_purple.jpg'); background-repeat: repeat; margin: 0; padding: 0;">
+<body background="https://cs.gettysburg.edu/~duncjo01/archive/patterns/windows/Windows%2095&98/INSTALL.bmp" bgcolor="#0000ff" text="#ffffff" link="#ffff00" vlink="#ff00ff" alink="#ff0000" marginwidth="0" marginheight="0" topmargin="0" leftmargin="0">
 
-<!-- Top Welcome Header -->
-<div style="text-align: center; padding-top: 15px;">
-    <img src="https://web.archive.org/web/20091020054106im_/http://geocities.com/pakasibes/welcome.gif" alt="Welcome">
-    <p style="color: white; font-family: sans-serif; margin: 5px 0;">Multimedia That Will Make you say YEAH! | V0.1</p>
+<!-- 1. Top Header (Welcome & Slogan) -->
+<div align="center" style="padding-top: 20px;">
+    <img src="https://web.archive.org/web/20091020054106im_/http://geocities.com/pakasibes/welcome.gif" alt="Welcome" style="filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.8));">
+    <p style="color: white; font-family: sans-serif; font-size: 14px; margin: 8px 0 20px 0; letter-spacing: 1px; text-shadow: 1px 1px 2px #000;">
+      Multimedia That Will Make you say YEAH! | V0.2
+    </p>
 </div>
 
-<!-- Main Layout Table -->
-<table width="100%" border="0" cellspacing="0" cellpadding="20">
-  <tr>
-    <!-- Left Column (2 images stacked) -->
-    <td align="left" valign="top" width="150">
-      <a href="https://xoxo2011.github.io/yeah/games.html"><img src="https://web.archive.org/web/20090830052349im_/http://geocities.com/Hollywood/Studio/5931/gamecube.gif" alt="GameCube" style="display: block; margin-bottom: 10px; border: none;"></a>
-      <a href="https://example.com"><img src="https://web.archive.org/web/20091021082948im_/http://geocities.com/TimesSquare/Portal/9463/image2/ani-music.gif" alt="Music" style="display: block; border: none;"></a>
-    </td>
+<!-- 2. "What's new" Section -->
+<div align="center" style="width: 80%; margin: 0 auto;">
+    <hr size="2" color="#ffffff">
     
-    <!-- Middle Column (GameCube image + Story Text) -->
-    <td align="center" valign="middle" style="color: white; font-family: sans-serif; font-size: 14px;">
-      <img src="https://ftpmirror.infania.net/sites/www.heathersanimations.net/school/sc47.gif" alt="GameCube" style="display: block; margin: 0 auto 15px auto;">
-      <p style="max-width: 600px; line-height: 1.6; margin: 0 auto;">
-        Since I was a Child, I Always Loved The ˗ˏˋ Internet ˎˊ˗ , I loved That Nostalgic Feeling of Old Web of the 2010s and the 2000s! I Had an Old Family PC form the 2000s That lived quite long. It was my open door of the internet, yet my Vault of games which literally made my childhood. And i loved that aesthetic of Old Flash Games and these Multimedia of the internet from GIFs, Music ...etc. But till 2025, I Had to Sell my Old PC as My Family wanted to after it "can't" be fixed again. (っ╥﹏╥ς) Luckly, I Had Stored My Hard Drive Which was full of Games and more! and i said Why not Share Them with The World?. And ofc I had to make this Website (ᵕ—ᴗ—) I Had To learn HTML and here it is my own WEBSITE ⋆✴⋆ Please Welcome Your Self! and explore my Vault of Multimedia! ❤❤
+    <div align="left" style="font-family: sans-serif; font-size: 14px; padding: 15px; background: rgba(0, 0, 0, 0.65); border: 2px solid #ffffff; border-radius: 6px; box-shadow: 0px 4px 10px rgba(0,0,0,0.5);">
+        <img src="https://web.archive.org/web/20090728234026im_/http://br.geocities.com/thiago_ap_faria/Poemas_arquivos/new8.gif" alt="What's New" border="0" style="display: block; margin-bottom: 12px;">
+        
+        <ul style="margin: 0; padding-left: 20px; line-height: 1.6;">
+          <li>Ofc Changed The Web Design!</li>
+          <li>Added New Page <strong>"Links"</strong></li>
+          <li>Added <strong>"Updates Archive"</strong></li>
+          <li>As of V0.2, I Added Most of our servers to Archive.org. Therefore, when the servers are temporarily offline, most of the games <strong>CAN'T</strong> be downloaded and some photos may <strong>NOT</strong> load until it comes back online.</li>
+        </ul>
+    </div>
+
+    <hr size="2" color="#ffffff">
+</div>
+
+<br><br>
+
+<!-- 3. Bottom Row: 3 Image Boxes with Red Titles Underneath -->
+<table width="80%" border="0" align="center" cellspacing="0" cellpadding="10">
+  <tr>
+    <!-- Left Box: GAMES -->
+    <td align="center" valign="top" width="33%">
+      <div class="nav-box" style="border: 3px solid #ffffff; background-color: rgba(0,0,0,0.5); padding: 10px; display: inline-block; box-shadow: 0px 4px 8px rgba(0,0,0,0.6);">
+        <a href="https://xoxo2011.github.io/yeah/games.html">
+          <img src="https://web.archive.org/web/20000919050146/http://www.geocities.com:80/ranwallace/img2.gif" alt="Games" border="0" width="150" height="200" style="object-fit: cover; display: block;">
+        </a>
+      </div>
+      <p style="margin-top: 10px;">
+        <a href="https://xoxo2011.github.io/yeah/games.html" style="text-decoration: none;">
+          <font color="#ff3333" face="sans-serif" size="4"><b>GAMES</b></font>
+        </a>
       </p>
     </td>
 
-    <!-- Right Column (2 images stacked) -->
-    <td align="right" valign="top" width="150">
-      <a href="https://xoxo2011.github.io/yeah/software.html"><img src="https://web.archive.org/web/20090801060614im_/http://hk.geocities.com/kenraybbs1986/f1_10_43/08.gif" alt="F1" style="display: block; margin-bottom: 10px; margin-left: auto; border: none;"></a>
-      <a href="https://example.com"><img src="https://web.archive.org/web/20090821085955im_/http://geocities.com/Athens/Acropolis/7232/gdlbs.gif" alt="Athens" style="display: block; margin-left: auto; border: none;"></a>
+    <!-- Center Box: SOFTWARE -->
+    <td align="center" valign="top" width="33%">
+      <div class="nav-box" style="border: 3px solid #ffffff; background-color: rgba(0,0,0,0.5); padding: 10px; display: inline-block; box-shadow: 0px 4px 8px rgba(0,0,0,0.6);">
+        <a href="https://xoxo2011.github.io/yeah/software.html">
+          <img src="https://motionarray.imgix.net/preview-607507-9XEPzZJ9uQ-high_0010.jpg?w=660&q=60&fit=max&auto=format" alt="Software" border="0" width="150" height="200" style="object-fit: cover; display: block;">
+        </a>
+      </div>
+      <p style="margin-top: 10px;">
+        <a href="https://xoxo2011.github.io/yeah/software.html" style="text-decoration: none;">
+          <font color="#ff3333" face="sans-serif" size="4"><b>SOFTWARE</b></font>
+        </a>
+      </p>
+    </td>
+
+    <!-- Right Box: LINKS -->
+    <td align="center" valign="top" width="33%">
+      <div class="nav-box" style="border: 3px solid #ffffff; background-color: rgba(0,0,0,0.5); padding: 10px; display: inline-block; box-shadow: 0px 4px 8px rgba(0,0,0,0.6);">
+        <a href="https://xoxo2011.github.io/yeah/links.html">
+          <img src="https://s.yimg.com/ec/aol-web/prod/about-us/images/father-son-pc.jpg" alt="Links" border="0" width="150" height="200" style="object-fit: cover; display: block;">
+        </a>
+      </div>
+      <p style="margin-top: 10px;">
+        <a href="https://xoxo2011.github.io/yeah/links.html" style="text-decoration: none;">
+          <font color="#ff3333" face="sans-serif" size="4"><b>LINKS</b></font>
+        </a>
+      </p>
     </td>
   </tr>
 </table>
 
-<!-- Bottom Center Footer -->
-<div align="center" style="color: #ffffff; font-family: sans-serif; font-size: 12px; padding: 20px 0;">
+<br><br>
+
+<!-- 4. "About" Section -->
+<div align="center" style="width: 80%; margin: 0 auto;">
+    <hr size="2" color="#ffffff">
+    
+    <div align="left" style="font-family: sans-serif; font-size: 14px; padding: 15px; background: rgba(0, 0, 0, 0.65); border: 2px solid #ffffff; border-radius: 6px; box-shadow: 0px 4px 10px rgba(0,0,0,0.5); line-height: 1.6;">
+        <img src="https://web.archive.org/web/20091027025422/http://hk.geocities.com/angelandblue2005/button02_211.gif" alt="about" border="0" style="display: block; margin-bottom: 12px;">
+        
+        <p style="margin: 0;">
+           Since I was a Child, I Always Loved The ˗ˏˋ Internet ˎˊ˗ , I loved That Nostalgic Feeling of Old Web of the 2010s and the 2000s! I Had an Old Family PC form the 2000s That lived quite long. It was my open door of the internet, yet my Vault of games which literally made my childhood. And i loved that aesthetic of Old Flash Games and these Multimedia of the internet from GIFs, Music ...etc. But till 2025, I Had to Sell my Old PC as My Family wanted to after it "can't" be fixed again. (っ╥﹏╥ς) Luckly, I Had Stored My Hard Drive Which was full of Games and more! and i said Why not Share Them with The World?. And ofc I had to make this Website (ᵕ—ᴗ—) I Had To learn HTML and here it is my own WEBSITE ⋆✴⋆ Please Welcome Your Self! and explore my Vault of Multimedia! ❤❤
+        </p>
+    </div>
+
+    <hr size="2" color="#ffffff">
+</div>
+
+<br><br>
+
+<!-- Footer -->
+<div align="center" style="color: #ffffff; font-family: sans-serif; font-size: 12px; padding: 20px 0; background: rgba(0, 0, 0, 0.5);">
   All rights belong to their owners. | 
-  <a href="mailto:windowsxplover99@gmail.com"><img src="https://ftpmirror.infania.net/sites/www.heathersanimations.net/webdesign1/e2.gif" alt="email" height="46" style="vertical-align: middle; border: none;"></a> | 
-  <img src="https://ftpmirror.infania.net/sites/www.heathersanimations.net/webdesign1/mh5item36st.gif" alt="familysafe" height="80" style="vertical-align: middle; border: none;"> | <a href="https://users2.smartgb.com/g/g.php?a=s&i=g26-41322-7f"><img src="https://web.archive.org/web/20090830031831im_/http://geocities.com/Tokyo/Lights/3928/libro_de_visitas.gif" alt="guestbook" height="46" style="vertical-align: middle; border: none;"></a> |
-  Graphics from: <a href="https://ftpmirror.infania.net/sites/www.heathersanimations.net/index.html"><img src="https://ftpmirror.infania.net/sites/www.heathersanimations.net/heathersanim.gif" alt="Heathers Animations" height="46" style="vertical-align: middle; border: none;"></a> | 
-  <script type="text/javascript" src="https://counter.websiteout.com/js/2/0/0/1"></script>
+  <a href="mailto:windowsxplover99@gmail.com"><img src="https://ftpmirror.infania.net/sites/www.heathersanimations.net/webdesign1/e2.gif" alt="email" height="46" align="absmiddle" border="0"></a> | 
+  <img src="https://ftpmirror.infania.net/sites/www.heathersanimations.net/webdesign1/mh5item36st.gif" alt="familysafe" height="80" align="absmiddle" border="0"> | 
+  <a href="https://users2.smartgb.com/g/g.php?a=s&i=g26-41322-7f"><img src="https://web.archive.org/web/20090830031831im_/http://geocities.com/Tokyo/Lights/3928/libro_de_visitas.gif" alt="guestbook" height="46" align="absmiddle" border="0"></a> |
+  Graphics from: <a href="https://ftpmirror.infania.net/sites/www.heathersanimations.net/index.html"><img src="https://ftpmirror.infania.net/sites/www.heathersanimations.net/heathersanim.gif" alt="Heathers Animations" height="46" align="absmiddle" border="0"></a> and <a href="https://gifcities.org/"><img src="https://gifcities.org/static/gifsearch/ia-logo.svg" alt="gifcities" height="46" align="absmiddle" border="0"></a> | 
+  <script type="text/javascript" src="https://counter.websiteout.com/js/2/0/0/1"></script> | <a href="https://xoxo2011.github.io/yeah/archive.html"><img src="https://web.archive.org/web/20091021144721im_/http://www.geocities.com/escritura1964/archivesanim.gif" alt="archive" height="46" align="absmiddle" border="0"></a>
 </div>
 
 </body>

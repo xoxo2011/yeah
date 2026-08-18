@@ -1,50 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script>
-var titles = [
-    "Multimedia that will make you say YEAH! ",
-    "Multimedia That Will make you say what?!?! ",
-    "Welcome to The Drowned Shipwreck of NOSTALGIA!!!! ",
-    "I was going to try an all almond diet, but that's just nuts.",
-    "I'm afraid for the calendar. Its days are numbered.",
-    "Dear Math, grow up and solve your own problems.",
-    "Why did the tomato blush? Because it saw the salad dressing!"
-];
-var title = titles[Math.floor(Math.random() * titles.length)], start = 1;
-document.title = title;
-function titlemove() {
-    document.title = title.substring(start) + title.substring(0, start);
-    if (++start > title.length) start = 0;
-    setTimeout(titlemove, 140);
-}
-if (document.title) titlemove();
-
-function filterGames(letter) {
-    var rows = document.getElementsByClassName('game-row');
-    for (var i = 0; i < rows.length; i++) {
-        var titleText = rows[i].getAttribute('data-title').toUpperCase();
-        if (letter === 'ALL' || titleText.startsWith(letter)) {
-            rows[i].style.display = '';
-        } else {
-            rows[i].style.display = 'none';
-        }
-    }
-}
-</script>
+<title> YEAH! - Games</title>
 <style>
-body { background: url('https://html-classic.itch.zone/html/17474030/img/kitsch_other_purple.jpg') repeat; margin: 0; padding: 0; color: #fff; font-family: sans-serif; }
-a img { border: none; vertical-align: middle; }
-.alphabet-bar { padding-left: 20px; padding-top: 10px; font-size: 14px; }
-.alphabet-bar a { color: #ff0; text-decoration: none; margin-right: 5px; font-weight: bold; }
-.alphabet-bar a:hover { text-decoration: underline; }
+  /* Glossy Green Button Style */
+  .btn-download {
+    display: inline-block;
+    padding: 8px 24px;
+    background: linear-gradient(to bottom, #7acc2d 0%, #3e8810 50%, #1c5203 100%);
+    border: 1px solid #143b02;
+    border-radius: 4px;
+    color: #ffffff !important;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: inset 0px 1px 0px rgba(255,255,255,0.5), 0px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    transition: filter 0.15s ease;
+  }
+  .btn-download:hover {
+    filter: brightness(1.15);
+  }
+
+  /* Alphabet Bar Styling */
+  .alphabet-bar {
+    margin: 15px 0 15px 10px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+  .alphabet-bar a {
+    color: #ffff00;
+    text-decoration: none;
+    margin-right: 5px;
+    font-weight: bold;
+  }
+  .alphabet-bar a:hover {
+    text-decoration: underline;
+  }
 </style>
 </head>
-<body>
+<body background="https://cs.gettysburg.edu/~duncjo01/archive/patterns/windows/Windows%2095&98/INSTALL.bmp" bgcolor="#0000ff" text="#ffffff" link="#ffff00" vlink="#ff00ff" alink="#ff0000" marginwidth="0" marginheight="0" topmargin="0" leftmargin="0">
 
 <div style="padding-left: 20px; padding-top: 15px;">
 <a href="https://xoxo2011.github.io/yeah/"><img src="https://ftpmirror.infania.net/sites/www.heathersanimations.net/webdesign1/back_007.gif" alt="back"></a>
     <p style="margin: 5px 0;">YEAH! - Games | Currently serving <strong>12</strong> Games listed | <img src="https://web.archive.org/web/20091027070726/http://www.geocities.com/dark_lotus_chick/Uploaded_Stuff/halls/pcskul.gif" alt="Virusfree" height="80"> Malware-Free</p> 
+</div>
+<!-- Scrolling Visitor Note -->
+<div align="center" style="width: 80%; margin: 15px auto; background: #000080; border: 1px solid #ffffff; padding: 5px;">
+  <marquee style="color: #ffff00; font-family: sans-serif; font-size: 13px;" scrollamount="4">
+    Please If you Find Any Malware Inform Me In the GuestBook! Thank you For Downloading from us!
+  </marquee>
 </div>
 
 <!-- Alphabet Letter Filter Bar -->
@@ -54,30 +61,31 @@ a img { border: none; vertical-align: middle; }
     <script>
         for (var i = 65; i <= 90; i++) {
             var char = String.fromCharCode(i);
-            document.write('<a href="javascript:void(0);" onclick="filterGames(\x27' + char + '\x27)">' + char + '</a> ');
+            document.write('<a href="javascript:void(0);" onclick="filterGames(\'' + char + '\')">' + char + '</a> ');
         }
     </script>
 </div>
 
-<table border="0" cellpadding="10" style="margin-left: 10px;">
-  <tr class="game-row" data-title="a">
+<table border="0" cellpadding="10" style="margin-left: 10px;" class="game-table" data-title="A">
+  <tr class="game-row">
     <td valign="middle">
       <img src="https://img.itch.zone/aW1nLzE1Nzg3NzMwLnBuZw==/original/Y8kcG%2B.png" alt="Game Image" width="200" height="200" style="border: 0px solid white; display: block;">
     </td>
     <td valign="middle">
       <h1 style="margin: 0 0 10px 0;">Angry Birds</h1>
       <p style="margin: 4px 0;">Genre: Arcade / Puzzle</p>
-      <p style="margin: 4px 0;">Size: 74.2 MB &nbsp;&nbsp;&nbsp;&nbsp; Year:  Version 2013-2014</p>
+      <p style="margin: 4px 0;">Size: 74.2 MB &nbsp;&nbsp;&nbsp;&nbsp; Year: Version 2013-2014</p>
       <p style="margin: 4px 0;">OS: windows</p>
       <p style="margin: 4px 0;">More info: <a href="https://archive.org/download/info_20260727/info.txt">Click for Info</a> </p>
-      <p style="margin: 8px 0 0 0;">
-        <a href="https://web.archive.org/web/20190522041331/http://download.angrybirds.com/games/AngryBirds/AngryBirdsInstaller_4.0.0.exe"><img src="https://web.archive.org/web/20090829074725im_/http://geocities.com/sunsetstrip/lounge/2302/download.gif" alt="download"></a>
+      <p style="margin: 12px 0 0 0;">
+        <a href="https://web.archive.org/web/20190522041331/http://download.angrybirds.com/games/AngryBirds/AngryBirdsInstaller_4.0.0.exe" class="btn-download">Download EXE ⤓</a>
       </p>
     </td>
   </tr>
 </table>
-<table border="0" cellpadding="10" style="margin-left: 10px;">
-  <tr class="game-row" data-title="A">
+
+<table border="0" cellpadding="10" style="margin-left: 10px;" class="game-table" data-title="A">
+  <tr class="game-row">
     <td valign="middle">
       <img src="https://www.axysoft.com/airxonix/airxonix_.jpg" alt="Game Image" width="200" height="200" style="border: 0px solid white; display: block;">
     </td>
@@ -87,14 +95,15 @@ a img { border: none; vertical-align: middle; }
       <p style="margin: 4px 0;">Size: 3.5 MB &nbsp;&nbsp;&nbsp;&nbsp; Year: Version 2007-2008</p>
       <p style="margin: 4px 0;">OS: windows</p>
       <p style="margin: 4px 0;">More info: <a href="https://dn721803.ca.archive.org/0/items/download_20250731_1126/AirXonix.txt">Click for Info</a> </p>
-      <p style="margin: 8px 0 0 0;">
-        <a href="https://archive.org/download/download_20250731_1126/AirXonix.exe"><img src="https://web.archive.org/web/20090829074725im_/http://geocities.com/sunsetstrip/lounge/2302/download.gif" alt="download"></a>
+      <p style="margin: 12px 0 0 0;">
+        <a href="https://archive.org/download/download_20250731_1126/AirXonix.exe" class="btn-download">Download EXE ⤓</a>
       </p>
     </td>
   </tr>
 </table>
-<table border="0" cellpadding="10" style="margin-left: 10px;">
-  <tr class="game-row" data-title="b">
+
+<table border="0" cellpadding="10" style="margin-left: 10px;" class="game-table" data-title="B">
+  <tr class="game-row">
     <td valign="middle">
       <img src="https://bobtherobber.io/upload/imgs/options/bob-the-robber-logo.jpg" alt="Game Image" width="200" height="200" style="border: 0px solid white; display: block;">
     </td>
@@ -103,15 +112,15 @@ a img { border: none; vertical-align: middle; }
       <p style="margin: 4px 0;">Genre: Strategy / Puzzle</p>
       <p style="margin: 4px 0;">Size: 9.0 MB &nbsp;&nbsp;&nbsp;&nbsp; Year: 2011</p>
       <p style="margin: 4px 0;">More info: Requires Adobe Flash Player From <a href="https://xoxo2011.github.io/yeah/software.html">Here</a> </p>
-      <p style="margin: 8px 0 0 0;">
-        <a href="https://archive.org/download/bob-the-robber_202507/Bob%20The%20Robber.swf"><img src="https://web.archive.org/web/20090829074725im_/http://geocities.com/sunsetstrip/lounge/2302/download.gif" alt="download"></a>
+      <p style="margin: 12px 0 0 0;">
+        <a href="https://archive.org/download/bob-the-robber_202507/Bob%20The%20Robber.swf" class="btn-download">Download SWF ⤓</a>
       </p>
     </td>
   </tr>
 </table>
-</table>
-<table border="0" cellpadding="10" style="margin-left: 10px;">
-  <tr class="game-row" data-title="b">
+
+<table border="0" cellpadding="10" style="margin-left: 10px;" class="game-table" data-title="B">
+  <tr class="game-row">
     <td valign="middle">
       <img src="https://cdn2.steamgriddb.com/logo/0fc8dee1ef46c0467df068405aa59715.png" alt="Game Image" width="200" height="200" style="border: 0px solid white; display: block;">
     </td>
@@ -120,14 +129,15 @@ a img { border: none; vertical-align: middle; }
       <p style="margin: 4px 0;">Genre: Strategy / Action</p>
       <p style="margin: 4px 0;">Size: 1.7 MB &nbsp;&nbsp;&nbsp;&nbsp; Year: 2010</p>
       <p style="margin: 4px 0;">More info: Requires Adobe Flash Player From <a href="https://xoxo2011.github.io/yeah/software.html">Here</a> </p>
-      <p style="margin: 8px 0 0 0;">
-        <a href="https://archive.org/download/bad-iswf-64_202607/Bad-Ice-Cream.swf"><img src="https://web.archive.org/web/20090829074725im_/http://geocities.com/sunsetstrip/lounge/2302/download.gif" alt="download"></a>
+      <p style="margin: 12px 0 0 0;">
+        <a href="https://archive.org/download/bad-iswf-64_202607/Bad-Ice-Cream.swf" class="btn-download">Download SWF ⤓</a>
       </p>
     </td>
   </tr>
 </table>
-<table border="0" cellpadding="10" style="margin-left: 10px;">
-  <tr class="game-row" data-title="b">
+
+<table border="0" cellpadding="10" style="margin-left: 10px;" class="game-table" data-title="B">
+  <tr class="game-row">
     <td valign="middle">
       <img src="https://img.tapimg.net/market/images/f9b906e03e11f061fe28db943b3344f7.jpg?imageView2/0/h/270/format/jpg/interlace/1/ignore-error/1&t=1" alt="Game Image" width="200" height="200" style="border: 0px solid white; display: block;">
     </td>
@@ -136,28 +146,30 @@ a img { border: none; vertical-align: middle; }
       <p style="margin: 4px 0;">Genre: Puzzle / Action</p>
       <p style="margin: 4px 0;">Size: 1.3 MB &nbsp;&nbsp;&nbsp;&nbsp; Year: 2002</p>
       <p style="margin: 4px 0;">More info: Requires Adobe Flash Player From <a href="https://xoxo2011.github.io/yeah/software.html">Here</a> </p>
-      <p style="margin: 8px 0 0 0;">
-        <a href="https://archive.org/download/bad-iswf-64_202607/bigmoneynewv32Th.swf"><img src="https://web.archive.org/web/20090829074725im_/http://geocities.com/sunsetstrip/lounge/2302/download.gif" alt="download"></a>
+      <p style="margin: 12px 0 0 0;">
+        <a href="https://archive.org/download/bad-iswf-64_202607/bigmoneynewv32Th.swf" class="btn-download">Download SWF ⤓</a>
       </p>
     </td>
   </tr>
 </table>
-<table border="0" cellpadding="10" style="margin-left: 10px;">
-  <tr class="game-row" data-title="c">
+
+<table border="0" cellpadding="10" style="margin-left: 10px;" class="game-table" data-title="C">
+  <tr class="game-row">
     <td valign="middle">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkETUPWArudspYk6fKH3U6jIcmllrWxBSU2c6hNYtJEw&s=10" alt="Game Image" width="200" height="200" style="border: 0px solid white; display: block;">
     </td>
     <td valign="middle">
       <h1 style="margin: 0 0 10px 0;">Chicken Invaders</h1>
       <p style="margin: 4px 0;">Genre: Action / Shooter</p>
-      <p style="margin: 8px 0 0 0;">
-        <a href="https://www.interactionstudios.com/download.php"><img src="https://web.archive.org/web/20090821192818im_/http://geocities.com/SoHo/Veranda/3852/misc2/175.gif" alt="download"></a> to website.
+      <p style="margin: 12px 0 0 0;">
+        <a href="https://www.interactionstudios.com/download.php" class="btn-download">Visit Website -></a>
       </p>
     </td>
   </tr>
 </table>
-<table border="0" cellpadding="10" style="margin-left: 10px;">
-  <tr class="game-row" data-title="c">
+
+<table border="0" cellpadding="10" style="margin-left: 10px;" class="game-table" data-title="C">
+  <tr class="game-row">
     <td valign="middle">
       <img src="https://img.utdstc.com/icon/bdb/b57/bdbb5783f50ad9ff9620c4df9e7c0016ce9ca2972be536e73283f55dd09e618b:600" alt="Game Image" width="200" height="200" style="border: 0px solid white; display: block;">
     </td>
@@ -167,14 +179,15 @@ a img { border: none; vertical-align: middle; }
       <p style="margin: 4px 0;">Size: 13.8 MB &nbsp;&nbsp;&nbsp;&nbsp; Year: 2006</p>
       <p style="margin: 4px 0;">OS: windows</p>
       <p style="margin: 4px 0;">More info: none</p>
-      <p style="margin: 8px 0 0 0;">
-        <a href="https://archive.org/download/cake-mania/Cake%20Mania.rar"><img src="https://web.archive.org/web/20090829074725im_/http://geocities.com/sunsetstrip/lounge/2302/download.gif" alt="download"></a>
+      <p style="margin: 12px 0 0 0;">
+        <a href="https://archive.org/download/cake-mania/Cake%20Mania.rar" class="btn-download">Download RAR ⤓</a>
       </p>
     </td>
   </tr>
 </table>
-<table border="0" cellpadding="10" style="margin-left: 10px;">
-  <tr class="game-row" data-title="c">
+
+<table border="0" cellpadding="10" style="margin-left: 10px;" class="game-table" data-title="C">
+  <tr class="game-row">
     <td valign="middle">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTYzaFT37Zo7CikNvcLh-GyVH6-6OEJsTqhiD0y4NsH678it7mPuPba-Rt&s=10" alt="Game Image" width="200" height="200" style="border: 0px solid white; display: block;">
     </td>
@@ -184,14 +197,15 @@ a img { border: none; vertical-align: middle; }
       <p style="margin: 4px 0;">Size: 28.8 MB &nbsp;&nbsp;&nbsp;&nbsp; Year: 2008</p>
       <p style="margin: 4px 0;">OS: windows</p>
       <p style="margin: 4px 0;">More info: none</p>
-      <p style="margin: 8px 0 0 0;">
-        <a href="https://cdn7.gametop.com/games/City-Racing.exe"><img src="https://web.archive.org/web/20090829074725im_/http://geocities.com/sunsetstrip/lounge/2302/download.gif" alt="download"></a>
+      <p style="margin: 12px 0 0 0;">
+        <a href="https://cdn7.gametop.com/games/City-Racing.exe" class="btn-download">Download EXE ⤓</a>
       </p>
     </td>
   </tr>
 </table>
-<table border="0" cellpadding="10" style="margin-left: 10px;">
-  <tr class="game-row" data-title="c">
+
+<table border="0" cellpadding="10" style="margin-left: 10px;" class="game-table" data-title="C">
+  <tr class="game-row">
     <td valign="middle">
       <img src="https://archive.org/download/game_32x32_24bit/game_32x32_24bit.png" alt="Game Image" width="200" height="200" style="border: 0px solid white; display: block;">
     </td>
@@ -201,14 +215,15 @@ a img { border: none; vertical-align: middle; }
       <p style="margin: 4px 0;">Size: 2.7 MB </p>
       <p style="margin: 4px 0;">OS: windows</p>
       <p style="margin: 4px 0;">More info: none</p>
-      <p style="margin: 8px 0 0 0;">
-        <a href="https://www.myrealgames.com/files/color-cubes.exe"><img src="https://web.archive.org/web/20090829074725im_/http://geocities.com/sunsetstrip/lounge/2302/download.gif" alt="download"></a>
+      <p style="margin: 12px 0 0 0;">
+        <a href="https://www.myrealgames.com/files/color-cubes.exe" class="btn-download">Download EXE ⤓</a>
       </p>
     </td>
   </tr>
 </table>
-<table border="0" cellpadding="10" style="margin-left: 10px;">
-  <tr class="game-row" data-title="g">
+
+<table border="0" cellpadding="10" style="margin-left: 10px;" class="game-table" data-title="G">
+  <tr class="game-row">
     <td valign="middle">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDdgYVhGEBSrtd3R6_yNZG9WybiPxBIENIMWgy3_Q0ag&s=10" alt="Game Image" width="200" height="200" style="border: 0px solid white; display: block;">
     </td>
@@ -216,16 +231,18 @@ a img { border: none; vertical-align: middle; }
       <h1 style="margin: 0 0 10px 0;">Grand Theft Auto - San Andreas</h1>
       <p style="margin: 4px 0;">Genre: Action-Adventure / Open World / Crime</p>
       <p style="margin: 4px 0;">Size: 3.8 GB &nbsp;&nbsp;&nbsp;&nbsp; Year: 2005</p>
-      <p style="margin: 4px 0;">OS: windows</p>
+      <p style="margin: 4px 0;">OS: windows </p>
       <p style="margin: 4px 0;">More info: <a href="https://ia903203.us.archive.org/12/items/gta-san-andreas-pc-gtasahub.com/CHEATS.txt"> Click For CHEATS </a></p>
-      <p style="margin: 8px 0 0 0;">
-        <a href="https://d.gtasahub.com/GTA-San-Andreas-PC-gtasahub.com.zip"><img src="https://web.archive.org/web/20090829074725im_/http://geocities.com/sunsetstrip/lounge/2302/download.gif" alt="download"></a>
+      <img height="60px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/ESRB_Mature_17%2B.svg/500px-ESRB_Mature_17%2B.svg.png?utm_source=ar.wikipedia.org&utm_campaign=index&utm_content=thumbnail" style="display:block; margin: 4px 0;">
+      <p style="margin: 12px 0 0 0;">
+        <a href="https://d.gtasahub.com/GTA-San-Andreas-PC-gtasahub.com.zip" class="btn-download">Download ZIP ⤓</a>
       </p>
     </td>
   </tr>
 </table>
-<table border="0" cellpadding="10" style="margin-left: 10px;">
-  <tr class="game-row" data-title="m">
+
+<table border="0" cellpadding="10" style="margin-left: 10px;" class="game-table" data-title="M">
+  <tr class="game-row">
     <td valign="middle">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWgJOxVq5QZgFqdIzg2S2joq9sFdwmPkrjll-MUkvKKw&s=10" alt="Game Image" width="200" height="200" style="border: 0px solid white; display: block;">
     </td>
@@ -235,14 +252,15 @@ a img { border: none; vertical-align: middle; }
       <p style="margin: 4px 0;">Size: 548.6 MB &nbsp;&nbsp;&nbsp;&nbsp; Year: 2000</p>
       <p style="margin: 4px 0;">OS: windows</p>
       <p style="margin: 4px 0;">More info: none</p>
-      <p style="margin: 8px 0 0 0;">
-        <a href="https://archive.org/download/m-ms-the-lost-formulas/M%26Ms%20The%20Lost%20Formulas.zip"><img src="https://web.archive.org/web/20090829074725im_/http://geocities.com/sunsetstrip/lounge/2302/download.gif" alt="download"></a>
+      <p style="margin: 12px 0 0 0;">
+        <a href="https://archive.org/download/m-ms-the-lost-formulas/M%26Ms%20The%20Lost%20Formulas.zip" class="btn-download">Download ZIP ⤓</a>
       </p>
     </td>
   </tr>
 </table>
-<table border="0" cellpadding="10" style="margin-left: 10px;">
-  <tr class="game-row" data-title="r">
+
+<table border="0" cellpadding="10" style="margin-left: 10px;" class="game-table" data-title="R">
+  <tr class="game-row">
     <td valign="middle">
       <img src="https://static.wikia.nocookie.net/logopedia/images/0/07/Roblox_icon_2006.svg/revision/latest?cb=20220319140509" alt="Game Image" width="200" height="200" style="border: 0px solid white; display: block;">
     </td>
@@ -252,12 +270,27 @@ a img { border: none; vertical-align: middle; }
       <p style="margin: 4px 0;">Size: 247.1 MB &nbsp;&nbsp;&nbsp;&nbsp; Year: Version 2008</p>
       <p style="margin: 4px 0;">OS: windows</p>
       <p style="margin: 4px 0;">More info: none</p>
-      <p style="margin: 8px 0 0 0;">
-        <a href="https://archive.org/download/roblox-corporation/ROBLOX%20Corporation.zip"><img src="https://web.archive.org/web/20090829074725im_/http://geocities.com/sunsetstrip/lounge/2302/download.gif" alt="download"></a>
+      <p style="margin: 12px 0 0 0;">
+        <a href="https://archive.org/download/roblox-corporation/ROBLOX%20Corporation.zip" class="btn-download">Download ZIP ⤓</a>
       </p>
     </td>
   </tr>
 </table>
+
+<!-- Filter Script -->
+<script>
+function filterGames(letter) {
+  var tables = document.getElementsByClassName('game-table');
+  for (var i = 0; i < tables.length; i++) {
+    var gameTitle = tables[i].getAttribute('data-title');
+    if (letter === 'ALL' || gameTitle === letter) {
+      tables[i].style.display = 'table';
+    } else {
+      tables[i].style.display = 'none';
+    }
+  }
+}
+</script>
 
 </body>
 </html>
