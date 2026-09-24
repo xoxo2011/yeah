@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <title>YEAH! - Historical Logo / Doodle Selector (1998-2009)</title>
+    <script>
+        // Your password is encoded here to hide it from plain text source viewing
+        const encodedPassword = "aWxpMmU2OUAk"; 
+        
+        let userEntered = prompt("Owner Access Required: Enter password to access Logo Selector:");
+        
+        if (btoa(userEntered) !== encodedPassword) {
+            alert("Farewell Suckers!!!");
+            window.location.href = "index.html"; 
+        }
+    </script>
+    <style>
+        body { font-family: arial, sans-serif; background-color: #ffffff; color: #000000; margin: 0; padding: 15px; }
+        .top-bar { display: flex; align-items: center; margin-bottom: 10px; }
+        .logo-container img { max-height: 85px; width: auto; height: auto; margin-right: 20px; }
+        .search-box-area { display: flex; align-items: center; gap: 6px; }
+        .search-input { width: 250px; padding: 3px 5px; font-size: 14px; border: 1px solid #7f9db9; }
+        .search-btn { background: #ece9d8; border: 1px solid #7f9db9; padding: 3px 8px; font-size: 13px; cursor: pointer; font-family: arial; }
+        .search-btn:hover { background: #e0dfd5; }
+        .results-bar { background: #3366cc; color: #ffffff; padding: 4px 10px; font-size: 13px; font-weight: bold; margin-bottom: 20px; display: flex; justify-content: space-between; }
+        
+        .content-area { margin-left: 20px; max-width: 700px; }
+        .result-item { margin-bottom: 25px; }
+        .result-title { font-size: 16px; color: #1a0dab; text-decoration: underline; margin-bottom: 3px; }
+        .result-snippet { font-size: 13px; color: #000000; line-height: 1.4; }
+        .input-box { margin-top: 10px; padding: 10px; background: #f0f4ff; border: 1px solid #b3d7ff; display: inline-block; }
+        .input-box input[type="text"] { width: 350px; padding: 4px; font-size: 12px; border: 1px solid #999; margin-right: 5px; }
+        .preview-img { max-height: 100px; width: auto; height: auto; margin-top: 10px; border: 1px dashed #ccc; padding: 5px; background: #fff; display: block; }
+    </style>
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000cc" vlink="#551A8B" alink="#ff0000">
+
+    <div class="top-bar">
+        <div class="logo-container">
+            <a href="index.html">
+                <img id="portal-logo" src="https://web.archive.org/web/20060404204915im_/http://www.google.com/intl/en/images/logo.gif" alt="Google Logo">
+            </a>
+        </div>
+        <div class="search-box-area">
+            <input type="text" class="search-input" value="Logo Selector Config" readonly>
+            <button class="search-btn">Google Search</button>
+            <a href="links.html">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='65' height='24'><rect width='65' height='24' fill='%23228b22' rx='3'/><text x='12' y='16' fill='white' font-family='Arial' font-size='12' font-weight='bold'>BACK</text></svg>" alt="BACK" style="border:none; vertical-align:middle; margin-left:15px;">
+            </a>
+        </div>
+    </div>
+
+    <div class="results-bar">
+        <span>Configuring Historical Logo / Doodle (1998-2009).</span>
+        <span id="active-status-bar" style="font-weight: normal;">Active: Standard Google Logo</span>
+    </div>
+
+    <div class="content-area">
+        
+        <div class="result-item">
+            <div class="result-title">Current Active Logo Preview</div>
+            <div class="result-snippet">
+                Here is what your portal's dynamic header logo looks like right now across your pages.
+                <img id="current-preview" class="preview-img" src="https://web.archive.org/web/20060404204915im_/http://www.google.com/intl/en/images/logo.gif" alt="Preview">
+            </div>
+        </div>
+
+        <div class="result-item">
+            <div class="result-title">Set Custom Google Doodle Image Link</div>
+            <div class="result-snippet">
+                Paste any direct image link from the Wayback Machine (1998-2009) to override the portal header instantly:<br>
+                <div class="input-box">
+                    <input type="text" id="custom-url-input" placeholder="https://web.archive.org/web/.../logo.gif">
+                    <button class="search-btn" onclick="applyCustomLogo()">Apply Link</button>
+                    <br><br>
+                    <button class="search-btn" onclick="resetDefaultLogo()">Reset to Default Google Logo</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const portalLogo = document.getElementById('portal-logo');
+        const previewImg = document.getElementById('current-preview');
+        const activeStatusBar = document.getElementById('active-status-bar');
+        const urlInput = document.getElementById('custom-url-input');
+
+        window.onload = function() {
+            const savedImg = localStorage.getItem('selectedDoodleImg');
+            const savedLabel = localStorage.getItem('selectedDoodleLabel');
+            if (savedImg) {
+                portalLogo.src = savedImg;
+                previewImg.src = savedImg;
+                activeStatusBar.innerHTML = `Active: ${savedLabel || 'Custom Archive Doodle'}`;
+                urlInput.value = savedImg;
+            }
+        };
+
+        function applyCustomLogo() {
+            const imgUrl = urlInput.value.trim();
+            if (!imgUrl) {
+                alert("Please paste a valid image link first!");
+                return;
+            }
+
+            localStorage.setItem('selectedDoodleImg', imgUrl);
+            localStorage.setItem('selectedDoodleLabel', 'Custom Archive Doodle');
+            
+            portalLogo.src = imgUrl;
+            previewImg.src = imgUrl;
+            activeStatusBar.innerHTML = `Active: Custom Archive Doodle (Applied!)`;
+            alert("Custom logo applied successfully to your portal!");
+        }
+
+        function resetDefaultLogo() {
+            const defaultUrl = "https://web.archive.org/web/20060404204915im_/http://www.google.com/intl/en/images/logo.gif";
+            localStorage.setItem('selectedDoodleImg', defaultUrl);
+            localStorage.setItem('selectedDoodleLabel', 'Standard Google Logo');
+            
+            portalLogo.src = defaultUrl;
+            previewImg.src = defaultUrl;
+            urlInput.value = "";
+            activeStatusBar.innerHTML = `Active: Standard Google Logo (Reset!)`;
+            alert("Reset back to standard Google logo!");
+        }
+    </script>
+
+</body>
+</html>
