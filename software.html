@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8">
 <title>YEAH! - Software</title>
 <style>
-  /* Alphabet Bar Styling */
-  .alphabet-bar {
-    margin: 15px 0 15px 10px;
+  /* Filter Box */
+  .filter-box {
+    margin: 15px auto;
+    text-align: center;
     font-family: Arial, sans-serif;
-    font-size: 16px;
+    font-size: 13px;
+    color: #fff;
   }
-  .alphabet-bar a {
-    color: #ffff00;
-    text-decoration: none;
-    margin-right: 5px;
-    font-weight: bold;
+  .filter-box .fb-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 10px;
   }
-  .alphabet-bar a:hover {
-    text-decoration: underline;
+  .filter-box label { display: block; text-align: left; }
+  .filter-box select {
+    display: block;
+    margin-top: 2px;
+    font-size: 13px;
+    min-width: 110px;
   }
+  .filter-box button { font-size: 13px; }
+  .filter-box .fb-count { margin-left: 4px; color: #ffff00; font-weight: bold; }
 </style>
 </head>
 <body background="https://cs.gettysburg.edu/~duncjo01/archive/patterns/windows/Windows%2095&98/INSTALL.bmp" bgcolor="#0000ff" text="#ffffff" link="#ffff00" vlink="#ff00ff" alink="#ff0000" marginwidth="0" marginheight="0" topmargin="0" leftmargin="0">
 
 <div style="padding-left: 20px; padding-top: 15px;">
 <a href="https://xoxo2011.github.io/yeah/"><img src="https://ftpmirror.infania.net/sites/www.heathersanimations.net/webdesign1/back_007.gif" alt="back"></a>
-    <p style="margin: 5px 0;">YEAH! - Software | Currently serving <strong>3</strong> programs listed | <img src="https://web.archive.org/web/20091027070726/http://www.geocities.com/dark_lotus_chick/Uploaded_Stuff/halls/pcskul.gif" alt="Virusfree" height="80"> Malware-Free</p> 
+    <p style="margin: 5px 0;">YEAH! - Software | Currently serving <strong>1</strong> program listed | <img src="https://web.archive.org/web/20091027070726/http://www.geocities.com/dark_lotus_chick/Uploaded_Stuff/halls/pcskul.gif" alt="Virusfree" height="80"> Malware-Free</p> 
 </div>
 
 <!-- Scrolling Visitor Note -->
@@ -34,16 +44,24 @@
   </marquee>
 </div>
 
-<!-- Alphabet Letter Filter Bar -->
-<div class="alphabet-bar">
-    Filter: 
-    <a href="javascript:void(0);" onclick="filterGames('ALL')">[ALL]</a>
-    <script>
-        for (var i = 65; i <= 90; i++) {
-            var char = String.fromCharCode(i);
-            document.write('<a href="javascript:void(0);" onclick="filterGames(\'' + char + '\')">' + char + '</a> ');
-        }
-    </script>
+<!-- Filter Box -->
+<div class="filter-box">
+  <div class="fb-row">
+    <label>Alphabetical
+      <select id="f-letter"><option value="">All</option></select>
+    </label>
+    <label>Year
+      <select id="f-year"><option value="">All</option></select>
+    </label>
+    <label>Genre
+      <select id="f-genre"><option value="">All</option></select>
+    </label>
+    <label>Publisher
+      <select id="f-publisher"><option value="">All</option></select>
+    </label>
+    <button type="button" id="f-reset">Reset</button>
+    <span class="fb-count" id="f-count"></span>
+  </div>
 </div>
 
 <table border="0" cellpadding="10" style="margin-left: 10px;" class="game-table" data-title="A">
@@ -53,8 +71,9 @@
     </td>
     <td valign="middle">
       <h1 style="margin: 0 0 10px 0;">Adobe Flash Player</h1>
+      <p style="margin: 4px 0;">Genre: Browser Plugin / Media Player</p>
       <p style="margin: 4px 0;">Size: 14.7 MB &nbsp;&nbsp;&nbsp;&nbsp; Year: Version 2018-2019</p>
-      <p style="margin: 4px 0;">OS: windows</p>
+      <p style="margin: 4px 0;">Publisher: Adobe</p>
       <p style="margin: 4px 0;">More info: None</p>
       <p style="margin: 12px 0 0 0;">
         <a href="https://archive.org/download/flashplayer_32_sa/flashplayer_32_sa.exe"><img src="https://web.archive.org/web/20090728121552im_/http://es.geocities.com/burguipage/download.gif" alt="Download"></a>
@@ -62,52 +81,101 @@
     </td>
   </tr>
 </table>
-<table border="0" cellpadding="10" style="margin-left: 10px;" class="game-table" data-title="M">
-  <tr class="game-row">
-    <td valign="middle">
-      <img src="https://static.wikia.nocookie.net/logopedia/images/1/14/Microsoft_Office_2003_Icon.svg/revision/latest?cb=20240405095301" alt="Game Image" width="200" height="200" style="border: 0px solid white; display: block;">
-    </td>
-    <td valign="middle">
-      <h1 style="margin: 0 0 10px 0;">Microsoft Office 2003 Professional Edition</h1>
-      <p style="margin: 4px 0;">Size: 391.7 MB &nbsp;&nbsp;&nbsp;&nbsp; Year: 2003</p>
-      <p style="margin: 4px 0;">OS: windows</p>
-      <p style="margin: 4px 0;">More info: CVJFK-RCQ34-WHMRD-KGXX4-T2HWY</p>
-      <p style="margin: 12px 0 0 0;">
-        <a href="https://archive.org/download/microsoft-office-2003-professional-edition/Microsoft%20Office%202003%20Professional%20Edition.iso"><img src="https://web.archive.org/web/20090728121552im_/http://es.geocities.com/burguipage/download.gif" alt="Download"></a>
-      </p>
-    </td>
-  </tr>
-</table>
-<table border="0" cellpadding="10" style="margin-left: 10px;" class="game-table" data-title="M">
-  <tr class="game-row">
-    <td valign="middle">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAVdlB4_DDRBgzEUaTz_MBN9pRZB4MwDcTQ_qFo4ORZ1wn3V53QXiJSWw&s=10" alt="Game Image" width="200" height="200" style="border: 0px solid white; display: block;">
-    </td>
-    <td valign="middle">
-      <h1 style="margin: 0 0 10px 0;">Microsoft Plus! For Windows Xp (Also Patched for modern Windows)</h1>
-      <p style="margin: 4px 0;">Size: 183 MB</p>
-      <p style="margin: 4px 0;">OS: windows</p>
-      <p style="margin: 4px 0;">More info: None</p>
-      <p style="margin: 12px 0 0 0;">
-        <a href="https://lucasc.me/share/Microsoft%20Plus%20XP%20(Patched).zip"><img src="https://web.archive.org/web/20090728121552im_/http://es.geocities.com/burguipage/download.gif" alt="Download"></a>
-      </p>
-    </td>
-  </tr>
-</table>
 
 <!-- Filter Script -->
 <script>
-function filterGames(letter) {
+(function () {
   var tables = document.getElementsByClassName('game-table');
-  for (var i = 0; i < tables.length; i++) {
-    var gameTitle = tables[i].getAttribute('data-title');
-    if (letter === 'ALL' || gameTitle === letter) {
-      tables[i].style.display = 'table';
-    } else {
-      tables[i].style.display = 'none';
-    }
+  var games = [];
+  var sets = { letter: {}, year: {}, genre: {}, publisher: {} };
+  var canon = {};
+  function norm(x) {
+    x = x.replace(/\s+/g, ' ').trim();
+    var k = x.toLowerCase();
+    if (!canon[k]) canon[k] = x.charAt(0).toUpperCase() + x.slice(1);
+    return canon[k];
   }
-}
+
+  for (var i = 0; i < tables.length; i++) {
+    var t = tables[i];
+    var g = { el: t, letter: '#', year: 'Unknown', publishers: ['#'], genres: [] };
+
+    var title = t.getAttribute('data-title');
+    if (title) g.letter = title.toUpperCase();
+
+    var ps = t.getElementsByTagName('p');
+    for (var j = 0; j < ps.length; j++) {
+      var txt = ps[j].textContent;
+      if (/^\s*Genre:/i.test(txt)) {
+        g.genres = txt.replace(/^\s*Genre:/i, '').split('/').map(norm).filter(Boolean);
+      }
+      var pm = txt.match(/^\s*Publisher:\s*(.+)$/i);
+      if (pm && pm[1].trim()) {
+        var seen = {};
+        g.publishers = pm[1].split('/').map(norm).filter(function (x) {
+          if (!x || seen[x]) return false;
+          seen[x] = 1; return true;
+        });
+        if (!g.publishers.length) g.publishers = ['#'];
+      }
+      var ym = txt.match(/Year:[^0-9]*(\d{4})/i);
+      if (ym) g.year = ym[1];
+    }
+
+    sets.letter[g.letter] = 1;
+    sets.year[g.year] = 1;
+    g.publishers.forEach(function (x) { sets.publisher[x] = 1; });
+    g.genres.forEach(function (x) { sets.genre[x] = 1; });
+    games.push(g);
+  }
+
+  function fill(id, obj, numericDesc) {
+    var sel = document.getElementById(id);
+    var keys = Object.keys(obj).sort(function (a, b) {
+      if (a === '#' || a === 'Unknown') return 1;
+      if (b === '#' || b === 'Unknown') return -1;
+      return numericDesc ? b - a : a.localeCompare(b);
+    });
+    keys.forEach(function (key) {
+      var o = document.createElement('option');
+      o.value = key; o.textContent = key;
+      sel.appendChild(o);
+    });
+    sel.onchange = apply;
+  }
+
+  function apply() {
+    var L = document.getElementById('f-letter').value;
+    var Y = document.getElementById('f-year').value;
+    var G = document.getElementById('f-genre').value;
+    var P = document.getElementById('f-publisher').value;
+    var shown = 0;
+    games.forEach(function (g) {
+      var ok = (!L || g.letter === L) &&
+               (!Y || g.year === Y) &&
+               (!G || g.genres.indexOf(G) !== -1) &&
+               (!P || g.publishers.indexOf(P) !== -1);
+      g.el.style.display = ok ? 'table' : 'none';
+      if (ok) shown++;
+    });
+    document.getElementById('f-count').textContent = shown + ' of ' + games.length;
+  }
+
+  // Alphabetical: always A to Z
+  for (var c = 65; c <= 90; c++) sets.letter[String.fromCharCode(c)] = 1;
+  fill('f-letter', sets.letter, false);
+  fill('f-year', sets.year, true);
+  fill('f-genre', sets.genre, false);
+  fill('f-publisher', sets.publisher, false);
+
+  document.getElementById('f-reset').onclick = function () {
+    ['f-letter', 'f-year', 'f-genre', 'f-publisher'].forEach(function (id) {
+      document.getElementById(id).value = '';
+    });
+    apply();
+  };
+  apply();
+})();
 </script>
 
 </body>
